@@ -1,12 +1,14 @@
 ---
-const platform = "github";
 const username = "2nofa11";
+import FooterIcon from "./FooterIcon.astro";
 ---
 
-<footer>
-  <p>
-    開発者について詳しくは<a href={`https://www.${platform}.com/${username}`}
-      >{platform}</a
-    >をご確認ください！
-  </p>
+<footer class="footer items-center p-4 bg-primary text-primary-content">
+  <div class="items-center grid-flow-col">
+    <p>問い合わせ先</p>
+  </div>
+  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <FooterIcon platform="twitter" username={username} />
+    <FooterIcon platform="github" username={username} />
+  </div>
 </footer>
