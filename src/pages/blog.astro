@@ -2,9 +2,10 @@
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Blog">
   <main>
     <Navigation />
     <h1 class="font-bold">カレーの豆知識</h1>
@@ -14,5 +15,6 @@ import Navigation from "../components/Navigation.astro";
       <li><a href="/posts/post-1/">記事1</a></li>
       <li><a href="/posts/post-2/">記事2</a></li>
     </ul>
+    <Footer />
   </main>
 </Layout>
