@@ -1,5 +1,6 @@
 ---
 const username = "2nofa11";
+import Icon from "astro-icon";
 import FooterIcon from "./FooterIcon.astro";
 ---
 
@@ -8,7 +9,7 @@ import FooterIcon from "./FooterIcon.astro";
     <p>問い合わせ先</p>
   </div>
   <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <FooterIcon platform="twitter" username={username} />
-    <FooterIcon platform="github" username={username} />
+    <FooterIcon platform="twitter" icon="twitter" username={username} />
+    <FooterIcon platform="github" icon="mdi:github" username={username} />
   </div>
 </footer>
