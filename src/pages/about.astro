@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const pageTitle = "きょうはカレーについて";
+
+const identity = {
+  firstName: "ツノ",
+  country: "日本",
+  occupation: "フロントエンドエンジニア",
+  hobbies: ["写真", "バードウォッチング", "野球"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "ドキュメントの執筆"];
 ---
 
 <Layout title="Welcome to Astro.">
@@ -8,7 +18,14 @@ import Layout from '../layouts/Layout.astro';
 		<a href="/about/">概要</a>
 		<a href="/blog/">ブログ</a>
 
-		<h1>きょうはカレーについて</h1>
+		<h1>{pageTitle}</h1>
 		<h2>このサイトの説明</h2>
+		<h2>開発者情報</h2>
+		<ul>
+			<li>{identity.country}</li>
+			{identity.hobbies.length >= 2 &&
+				<li>私の趣味は{identity.hobbies[0]}と{identity.hobbies[1]}です</li>
+			}
+		</ul>
 	</main>
 </Layout>
