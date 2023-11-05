@@ -1,7 +1,16 @@
 ---
-
+import NavigationHamburgerMenu from "./NavigationHamburgerMenu.astro";
 ---
 
-<a href="/">ホーム</a>
-<a href="/about/">概要</a>
-<a href="/blog/">ブログ</a>
+<div class="navbar bg-primary rounded-lg">
+  <div class="navbar-start">
+    <NavigationHamburgerMenu />
+  </div>
+  <div class="navbar-center">
+    <a class="normal-case text-xl">きょうはカレー</a>
+  </div>
+  <div class="navbar-end">
+    <button class="btn btn-ghost">ログイン</button>
+    <button class="btn btn-ghost bg-base-100 text-secondary">新規登録</button>
+  </div>
+</div>
