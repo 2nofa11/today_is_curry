@@ -1,14 +1,25 @@
 ---
 import NavigationHamburgerMenu from "./NavigationHamburgerMenu.astro";
+
+interface Props {
+  isPrimary?: boolean;
+  showNavbarCenter?: boolean;
+}
+
+const { isPrimary, showNavbarCenter } = Astro.props as Props;
 ---
 
-<div class="navbar bg-primary rounded-lg">
+<div class={`navbar ${isPrimary ? "bg-primary" : ""} rounded-lg`}>
   <div class="navbar-start">
     <NavigationHamburgerMenu />
   </div>
-  <div class="navbar-center">
-    <a class="normal-case text-xl">きょうはカレー</a>
-  </div>
+  {
+    showNavbarCenter && (
+      <div class="navbar-center">
+        <a class="normal-case text-xl">きょうはカレー</a>
+      </div>
+    )
+  }
   <div class="navbar-end">
     <button class="btn btn-ghost">ログイン</button>
     <button class="btn btn-ghost bg-base-100 text-secondary">新規登録</button>
