@@ -1,8 +1,6 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 const pageTitle = "きょうはカレーについて";
 
 const identity = {
@@ -24,7 +22,6 @@ const skills = [
 
 <Layout title="About">
   <main>
-    <Navigation />
     <h1>{pageTitle}</h1>
     <h2>このサイトの説明</h2>
     <h2>開発者情報</h2>
@@ -38,6 +35,5 @@ const skills = [
         )
       }
     </ul>
-    <Footer />
   </main>
 </Layout>
