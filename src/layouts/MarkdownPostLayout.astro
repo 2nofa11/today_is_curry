@@ -1,19 +1,14 @@
 ---
 const { frontmatter } = Astro.props;
 
-import Wrapper from "./Wrapper.astro";
+import Layout from "./Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Wrapper>
-  <title slot="head">{frontmatter.title}</title>
-  <body>
-    <Navigation isPrimary={true} showNavbarCenter={true} />
-    <h1>{frontmatter.title}</h1>
-    <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
-    <p>著者: {frontmatter.author}</p>
-    <slot />
-    <Footer />
-  </body>
-</Wrapper>
+<Layout title={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
+  <p>著者: {frontmatter.author}</p>
+  <slot />
+</Layout>
