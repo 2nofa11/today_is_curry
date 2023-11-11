@@ -11,6 +11,7 @@ import Footer from "../components/Footer.astro";
   <body>
     <Navigation isPrimary={true} showNavbarCenter={true} />
     <h1>{frontmatter.title}</h1>
+    <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
     <p>著者: {frontmatter.author}</p>
     <slot />
     <Footer />
