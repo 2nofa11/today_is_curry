@@ -4,23 +4,17 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Wrapper from "./Wrapper.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
+<Wrapper>
+  <title slot="head">{title}</title>
+  <body slot="body">
     <Navigation isPrimary={true} showNavbarCenter={true} />
     <slot />
     <Footer />
   </body>
-</html>
+</Wrapper>

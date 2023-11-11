@@ -1,7 +1,18 @@
 ---
 const { frontmatter } = Astro.props;
+
+import Wrapper from "./Wrapper.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<h1>{frontmatter.title}</h1>
-<p>著者: {frontmatter.author}</p>
-<slot />
+<Wrapper>
+  <title slot="head">{frontmatter.title}</title>
+  <body>
+    <Navigation isPrimary={true} showNavbarCenter={true} />
+    <h1>{frontmatter.title}</h1>
+    <p>著者: {frontmatter.author}</p>
+    <slot />
+    <Footer />
+  </body>
+</Wrapper>
