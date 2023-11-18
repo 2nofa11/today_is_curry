@@ -4,11 +4,11 @@ import Icon from "astro-icon";
 import FooterIcon from "./FooterIcon.astro";
 ---
 
-<footer class="footer items-center p-4 bg-primary text-primary-content">
-  <div class="items-center grid-flow-col">
+<footer class="footer p-4 bg-primary grid-flow-col text-primary-content">
+  <div class="grid-flow-col">
     <p>問い合わせ先</p>
   </div>
-  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+  <div class="grid-flow-col gap-4 justify-self-end">
     <FooterIcon platform="twitter" icon="twitter" username={username} />
     <FooterIcon platform="github" icon="mdi:github" username={username} />
   </div>
