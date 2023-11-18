@@ -8,5 +8,14 @@ import Layout from "./Layout.astro";
   <h1>{frontmatter.title}</h1>
   <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
   <p>著者: {frontmatter.author}</p>
+  <div class="tags">
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
   <slot />
 </Layout>
