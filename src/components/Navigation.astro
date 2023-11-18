@@ -16,12 +16,14 @@ const { isPrimary, showNavbarCenter } = Astro.props as Props;
   {
     showNavbarCenter && (
       <div class="navbar-center">
-        <a class="normal-case text-xl">きょうはカレー</a>
+        <a class="normal-case text-xl">ロゴ</a>
       </div>
     )
   }
   <div class="navbar-end">
-    <button class="btn btn-ghost">ログイン</button>
-    <button class="btn btn-ghost bg-base-100 text-secondary">新規登録</button>
+    <button class="btn btn-ghost btn-xs">ログイン</button>
+    <button class="btn btn-ghost btn-xs bg-base-100 text-secondary">
+      新規登録
+    </button>
   </div>
 </div>
