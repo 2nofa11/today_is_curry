@@ -1,8 +1,11 @@
 ---
 import "../styles/global.css";
 import Top from "../layouts/Top.astro";
+import Greeting from "../components/Greeting.vue";
 ---
 
 <Top>
   <main>メイン</main>
+  <Greeting messages={["hi"]} />
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </Top>
